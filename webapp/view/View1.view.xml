@@ -1,7 +1,85 @@
 <mvc:View controllerName="zov2.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:t="sap.ui.table"
     xmlns="sap.m">
+
+    <!-- Define a view do MVC vinculada ao controlador especificado (zov2.controller.View1). -->
+    <!-- xmlns:mvc define o namespace para elementos do MVC. -->
+    <!-- xmlns:t define o namespace para a tabela (sap.ui.table). -->
+    <!-- xmlns="sap.m" define o namespace padrão como sap.m para componentes de UI5. -->
+    <!-- displayBlock="true" garante que a view ocupe toda a área disponível. -->
+
     <Page id="page" title="{i18n>title}">
-       <Button text="Hello world" press="onPress"/>
+        <!-- Define uma página da biblioteca "sap.m" com ID "page" e título obtido do modelo i18n. -->
+
+        <Button text="Hello world" press="onPress"/>
+        <!-- Um botão com texto "Hello world" que executa o método "onPress" do controlador quando clicado. -->
+
+        <VBox>
+            <!-- Cria um contêiner VBox (vertical box) para organizar elementos verticalmente. -->
+            <Label text="Id do cliente" class="sapUiTinyMargin"/>
+            <!-- Rótulo com o texto "Id do cliente" e um pequeno espaçamento aplicado. -->
+            <Input class="sapUiTinyMargin"/>
+            <!-- Campo de entrada de texto com espaçamento aplicado. -->
+        </VBox>
+
+        <t:Table id="table1"
+            rows="{/OvCabSet}"
+            visibleRowCount="10"
+            threshold="10"
+            class="sapUiTinyMargin"
+            selectionMode="MultiToggle">
+            <!-- Cria uma tabela (sap.ui.table.Table) com ID "table1". -->
+            <!-- rows="{/OvCabSet}" vincula a tabela ao conjunto de dados "/OvCabSet". -->
+            <!-- visibleRowCount="10" define o número de linhas visíveis como 10. -->
+            <!-- threshold="10" define um limite para carregamento de dados adicionais. -->
+            <!-- class="sapUiTinyMargin" adiciona um pequeno espaçamento à tabela. -->
+            <!-- selectionMode="MultiToggle" permite seleção múltipla de linhas com alternância. -->
+
+            <t:toolbar>
+                <OverflowToolbar>
+                    <!-- Adiciona uma barra de ferramentas expansível acima da tabela. -->
+                    <Title id="title" text="Ordens"></Title>
+                    <!-- Exibe o título "Ordens" dentro da barra de ferramentas. -->
+                </OverflowToolbar>
+            </t:toolbar>
+
+            <t:columns>
+                <!-- Define as colunas da tabela. -->
+
+                <t:Column width="4rem" sortProperty="OrdemId">
+                    <!-- Define uma coluna com largura de 4 rems e propriedade de ordenação "OrdemId". -->
+                    <Label text="OrdemId" />
+                    <!-- Adiciona o rótulo "OrdemId" para a coluna. -->
+                    <t:template>
+                        <Text text="{OrdemId}" wrapping="false" />
+                        <!-- Vincula o texto da célula à propriedade "OrdemId" do modelo de dados. -->
+                    </t:template>
+                </t:Column>
+
+                <t:Column width="10rem" sortProperty="ClienteId" filterProperty="ClienteId" autoResizable="true">
+                    <!-- Define uma coluna com largura de 10 rems, propriedades de ordenação e filtro "ClienteId". -->
+                    <!-- autoResizable="true" permite redimensionamento automático da coluna. -->
+                    <Label text="Id do cliente" />
+                    <!-- Adiciona o rótulo "Id do cliente" para a coluna. -->
+                    <t:template>
+                        <Text text="{ClienteId}" wrapping="false" />
+                        <!-- Vincula o texto da célula à propriedade "ClienteId" do modelo de dados. -->
+                    </t:template>
+                </t:Column>
+
+                <t:Column width="10rem" sortProperty="TotalItens" filterProperty="TotalItens" autoResizable="true">
+                    <!-- Define uma coluna com largura de 10 rems, propriedades de ordenação e filtro "TotalItens". -->
+                    <Label text="Total Itens" />
+                    <!-- Adiciona o rótulo "Total Itens" para a coluna. -->
+                    <t:template>
+                        <Text text="{TotalItens}" wrapping="false" />
+                        <!-- Vincula o texto da célula à propriedade "TotalItens" do modelo de dados. -->
+                    </t:template>
+                </t:Column>
+
+            </t:columns>
+        </t:Table>
+
     </Page>
 </mvc:View>
