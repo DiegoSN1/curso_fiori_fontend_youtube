@@ -25,135 +25,64 @@
             <!-- Campo de entrada de texto com espaçamento aplicado. -->
         </VBox>
         
-         <f:Form id="FormChange354" editable="true">
-    <f:title>
-        <core:Title text="Calculadora" />
-    </f:title>
-    <f:layout>
-        <f:ResponsiveGridLayout
-            labelSpanXL="3"
-            labelSpanL="3"
-            labelSpanM="3"
-            labelSpanS="12"
-            adjustLabelSpan="false"
-            emptySpanXL="1"  
-            emptySpanL="1"
-            emptySpanM="1"
-            emptySpanS="0"
-            columnsXL="3"  
-            columnsL="3"
-            columnsM="2"
-            singleContainerFullSize="false" />
-    </f:layout>
-    <f:formContainers>
-        <!-- Coluna 1 -->
-        <f:FormContainer>
-            <f:formElements>
-                <f:FormElement label="1º Bimestre">
-                    <f:fields>
-                        <Input value="" id="b1"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="2º Bimestre">
-                    <f:fields>
-                        <Input value="" id="b2"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="3º Bimestre">
-                    <f:fields>
-                        <Input value="" id="b3"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="4º Bimestre">
-                    <f:fields>
-                        <Input value="" id="b4"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="Resultado">
-                    <f:fields>
-                        <Input value="" id="resultado" editable="false"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="">
-                    <f:fields>
-                        <Button text="Calcular" press="onCalcular"/>
-                    </f:fields>
-                </f:FormElement>
-            </f:formElements>
-        </f:FormContainer>
-        <!-- Coluna 2 -->
-        <f:FormContainer>
-            <f:formElements>
-                <f:FormElement label="1º Bimestre">
-                    <f:fields>
-                        <Input value="" id="b1_col2"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="2º Bimestre">
-                    <f:fields>
-                        <Input value="" id="b2_col2"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="3º Bimestre">
-                    <f:fields>
-                        <Input value="" id="b3_col2"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="4º Bimestre">
-                    <f:fields>
-                        <Input value="" id="b4_col2"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="Resultado">
-                    <f:fields>
-                        <Input value="" id="resultado_col2" editable="false"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="">
-                    <f:fields>
-                        <Button text="Calcular" press="onCalcular"/>
-                    </f:fields>
-                </f:FormElement>
-            </f:formElements>
-        </f:FormContainer>
-        <!-- Coluna 3 -->
-        <f:FormContainer>
-            <f:formElements>
-                <f:FormElement label="1º Bimestre">
-                    <f:fields>
-                        <Input value="" id="b1_col3"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="2º Bimestre">
-                    <f:fields>
-                        <Input value="" id="b2_col3"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="3º Bimestre">
-                    <f:fields>
-                        <Input value="" id="b3_col3"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="4º Bimestre">
-                    <f:fields>
-                        <Input value="" id="b4_col3"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="Resultado">
-                    <f:fields>
-                        <Input value="" id="resultado_col3" editable="false"/>
-                    </f:fields>
-                </f:FormElement>
-                <f:FormElement label="">
-                    <f:fields>
-                        <Button text="Calcular" press="onCalcular"/>
-                    </f:fields>
-                </f:FormElement>
-            </f:formElements>
-        </f:FormContainer>
-    </f:formContainers>
-</f:Form>
-
+            <f:Form id="FormChange354" editable="true">
+            <f:title>
+                <core:Title text="Calculadora" />
+            </f:title>
+            <f:layout>
+                <f:ResponsiveGridLayout
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false" />
+            </f:layout>
+            <f:formContainers>
+                <f:FormContainer>
+                    <f:formElements>
+                        <f:FormElement label="1º Bimestre">
+                            <f:fields>
+                                <Input value="" id="b1"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="2º Bimestre">
+                            <f:fields>
+                                <Input value="" id="b2"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="3º Bimestre">
+                            <f:fields>
+                                <Input value="" id="b3"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="4º Bimestre">
+                            <f:fields>
+                                <Input value="" id="b4"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="Resultado">
+                            <f:fields>
+                                <Input value="" id="resultado" editable="false"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="">
+                            <f:fields>
+                                <Button text="Calcular" press="onCalcular"/>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+            </f:formContainers>
+        </f:Form>
+        
         <t:Table id="table1"
             rows="{/OvCabSet}"
             visibleRowCount="10"
