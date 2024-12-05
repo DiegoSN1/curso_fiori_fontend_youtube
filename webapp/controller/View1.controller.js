@@ -7,7 +7,19 @@ function (Controller,MessageToast) {
 
     return Controller.extend("zov2.controller.View1", {
         onInit: function () {
-          
+                          
+                // model padrão da view
+                var oView  = this.getView();
+                var oModel = new sap.ui.model.json.JSONModel();
+                oModel.setData({"usuario": {"nome": "Diego Silva"}});
+                oView.setModel(oModel,"dados1");
+                
+                
+                // model com o nome "dados"
+                var oView  = this.getView();
+                var oModel = new sap.ui.model.json.JSONModel();
+                oModel.setData({"usuario": {"nome": "José"}});
+                oView.setModel(oModel,"dados");
 
         },
         onPress: function(){

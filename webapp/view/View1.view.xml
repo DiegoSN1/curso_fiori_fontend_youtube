@@ -24,10 +24,11 @@
             <Input class="sapUiTinyMargin"/>
             <!-- Campo de entrada de texto com espaçamento aplicado. -->
         </VBox>
+          
         
             <f:Form id="FormChange354" editable="true">
             <f:title>
-                <core:Title text="Calculadora" />
+                <core:Title text="{i18n>customerNamei}" />
             </f:title>
             <f:layout>
                 <f:ResponsiveGridLayout
@@ -82,7 +83,7 @@
                 </f:FormContainer>
             </f:formContainers>
         </f:Form>
-        
+
         <t:Table id="table1"
             rows="{/OvCabSet}"
             visibleRowCount="10"
@@ -140,6 +141,37 @@
 
             </t:columns>
         </t:Table>
+        <VBox class="sapUiTinyMargin">
+        <Label text="Model padrão da view (origem: controller)"/>
+        <Text text="{dados1>/usuario/nome}"/>
 
+        <Text text="--------------------------------------------------"/>
+
+        <Label text="Model 'dados' da view (origem: controller)"/>
+        <Text text="{dados>/usuario/nome}"/>
+
+        <Text text="--------------------------------------------------"/>
+        
+        <Label text="Model i18n - chave title (origem: manifest)"/>
+        <Text text="{i18n>title}"/>
+
+        <Text text="--------------------------------------------------"/>
+
+        <Label text="Model 'usuarios' (origem: manifest)"/>
+        <Text text="{usuarios>/0/id} - {usuarios>/0/nome}"/>
+
+        <Text text="--------------------------------------------------"/>
+        
+        <Label text="Model padrão do serviço (origem: manifest)"/>
+        <List headerText="Ordens" items="{ path: '/OVCabSet' }" >
+          <StandardListItem title="Ordem {OrdemId}" description="{CriadoPor}"/>
+        </List>
+
+        <Text text="{/OVCabSet(1)/OrdemId} - {/OVCabSet(1)/CriadoPor}"/>
+
+        <Text text="--------------------------------------------------"/>
+
+        <Button text="Testar Models" press="onTestModels"/>
+      </VBox>
     </Page>
 </mvc:View>
